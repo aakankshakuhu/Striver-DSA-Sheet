@@ -1,0 +1,22 @@
+public class MaxConsecutive {
+
+    public static int myapproach(int arr[], int n){
+        int max_count = 0, count = 0;
+        for(int i = 0; i < n; i++){
+            if(arr[i] == 1){
+                count += arr[i];
+            }
+            else {
+                count = 0;
+            }
+            max_count = Math.max(max_count, count);
+        }
+        return max_count;
+    }
+    
+    public static void main(String args[]){
+        int arr[] = {1, 1, 1, 1, 0, 1};
+        int n = arr.length;
+        System.out.println("Maximum number of consecutive 1's: " + myapproach(arr, n));
+    }
+}
