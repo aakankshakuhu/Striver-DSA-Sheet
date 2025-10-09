@@ -17,6 +17,7 @@ public class MajorityHalfElm {
         return -1;
     }
 
+    //more voting algorithm
     public static int moorevotingalgo(int arr[], int n) {
         int cnt = 0;
         int elm = 0;
