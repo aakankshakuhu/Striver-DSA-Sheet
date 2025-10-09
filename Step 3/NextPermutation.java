@@ -37,7 +37,7 @@ public class NextPermutation {
     }
     
     public static void main(String args[]) {
-        int arr[] = {5, 4, 3, 2, 1, 0, 0};
+        int arr[] = {1,3,5,4,2};
         int n = arr.length;
         optimalapproach(arr, n);
     }
