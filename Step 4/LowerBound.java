@@ -10,7 +10,7 @@ public class LowerBound {
     }
 
     public static int binarysearch(int arr[], int n, int x){
-        int low = 0, high = n-1, ans = -1;
+        int low = 0, high = n-1, ans = n;
         while(low <= high) {
             int mid = (high+low)/2;
             if(arr[mid] >= x){
