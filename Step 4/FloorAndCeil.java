@@ -1,7 +1,7 @@
 public class FloorAndCeil {
 
     public static int floor(int arr[], int n, int x){
-       int low = 0, high = n-1, ans = Integer.MIN_VALUE;
+       int low = 0, high = n-1, ans = -1;
        while(low <= high){
         int mid = (low+high)/2;
         if(arr[mid] <= x){
