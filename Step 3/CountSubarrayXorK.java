@@ -37,7 +37,7 @@ public class CountSubarrayXorK {
         return cnt;
     }
     
-    public static void main(String args[]){~
+    public static void main(String args[]){
         int arr[] = {4, 2, 2, 6, 4};
         int n = arr.length;
         int k = 6;
