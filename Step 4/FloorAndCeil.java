@@ -1,5 +1,6 @@
 public class FloorAndCeil {
 
+    //floor of x is the largest element in the array which is smaller than or equal to x.
     public static int floor(int arr[], int n, int x){
        int low = 0, high = n-1, ans = -1;
        while(low <= high){
@@ -15,6 +16,7 @@ public class FloorAndCeil {
        return ans;
     }
     
+    //The ceiling of x is the smallest element in the array greater than or equal to x
     public static int ceil(int arr[], int n, int x){
         int low = 0, high = n-1, ans = n;
         while(low <= high) {
