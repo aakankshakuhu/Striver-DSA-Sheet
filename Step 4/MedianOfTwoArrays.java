@@ -69,12 +69,75 @@ public class MedianOfTwoArrays {
             return (elm1+elm2)/2.0;
         }
     }
+
+    public static double binarysearch(int arr1[], int arr2[]){
+
+        //ensure that the binary search is applied on the smaller array
+        if (arr1.length > arr2.length)  return binarysearch(arr2, arr1);
+
+        int n1 = arr1.length, n2 = arr2.length;
+        int low = 0, high = n1;
+
+        while(low <= high) {
+            int cut1 = (low+high)/2;
+            int cut2 = (n1+n2+1)/2 - cut1;
+
+            int l1;
+            if(cut1 == 0){
+                l1 = Integer.MIN_VALUE;
+            }
+            else{
+                l1 = arr1[cut1 - 1];
+            }
+
+            int l2;
+            if(cut2 == 0){
+                l2 = Integer.MIN_VALUE;
+            }
+            else{
+                l2 = arr2[cut2 - 1];
+            }
+
+            int r1;
+            if(cut1 == n1){
+                r1 = Integer.MAX_VALUE;
+            }
+            else{
+                r1 = arr1[cut1];
+            }
+
+            int r2;
+            if(cut2 == n2){
+                r2 = Integer.MAX_VALUE;
+            }
+            else{
+                r2 = arr2[cut2];
+            }
+
+            if(l1 <= r2 && l2 <= r1){
+                if((n1+n2) % 2 == 0){
+                    return (Math.max(l1, l2) + Math.min(r1, r2))/2.0;
+                }
+                else{
+                    return(Math.max(l1, l2));
+                }
+            }
+
+            else if(l1 > r2){
+                high = cut1 - 1;
+            }
+            else{
+                low = cut1 + 1;
+            }
+        }
+        return 0.0;
+    }
     
     public static void main(String args[]){
         int arr1[] = {2, 4, 6};
         int arr2[] = {1, 3, 5, 7};
         int n = arr1.length;
         int m = arr2.length;
-        System.out.println("Median of the two sorted arrays: " + betterapproach(arr1, arr2, n, m));
+        System.out.println("Median of the two sorted arrays: " + binarysearch(arr1, arr2));
     }
 }
