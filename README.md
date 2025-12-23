@@ -33,12 +33,6 @@ Each folder represents a step in the sheet and my progress through it.
 
 ---
 
-## My Mindset While Solving Problems
-
-- Consistency > speed
-- Understanding > memorization
-- Progress > comparison
-- Discipline > motivation
 
 This repository is a **learning log**, not just a collection of answers.
 
