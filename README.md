@@ -2,7 +2,7 @@
 
 This repository documents my **daily Data Structures & Algorithms practice** using **Striver’s A2Z DSA Sheet**.
 
-I am currently in my **3rd year of engineering (VI sesmester)**, and this repository represents a conscious decision to go back to the fundamentals, build strong problem-solving skills, and stay consistent — because it’s **never too late to start doing things the right way**.
+I am currently in my **3rd year of engineering (VI semester)**, and this repository represents a conscious decision to go back to the fundamentals, build strong problem-solving skills, and stay consistent — because it’s **never too late to start doing things the right way**.
 
 ---
 
