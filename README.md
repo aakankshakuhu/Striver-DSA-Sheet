@@ -27,7 +27,6 @@ It is about **showing up every day and improving gradually**.
 - Solving problems **daily**
 - Writing clean and understandable solutions
 - Focusing on **patterns, logic, and intuition**
-- Revisiting mistakes and improving previous solutions
 
 Each folder represents a step in the sheet and my progress through it.
 
