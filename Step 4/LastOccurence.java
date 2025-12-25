@@ -19,9 +19,9 @@ public class LastOccurence {
     }
     
     public static void main(String args[]){
-        int arr[] = {3, 13, 13, 13, 13, 20, 40};
+        int arr[] = {3, 4, 13, 13, 13, 20, 40};
         int n = arr.length;
-        int target = 60;
+        int target = 13;
         System.out.println("Last occurence of the target lemenet in the given array is at index: " + myapproach(arr, n, target));
     }
 }
