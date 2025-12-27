@@ -79,7 +79,7 @@ public class PascalTriangle {
         // System.out.println("Element: " + variation1(row, col));
         // variation2brute(5);
         // variation2optimal(6);
-        // variation3brute(6);
+        variation3brute(6);
         variation3optimal(6);
     }
 }
