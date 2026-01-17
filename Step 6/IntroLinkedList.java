@@ -1,5 +1,11 @@
 public class IntroLinkedList {
 
+    private int size;
+
+    IntroLinkedList() {
+        this.size = 0;
+    }
+
     class Node {
         String data;
         Node next;
@@ -7,6 +13,7 @@ public class IntroLinkedList {
         Node(String data){
             this.data = data;
             this.next = null;
+            size++;
         }
     }
 
@@ -19,7 +26,7 @@ public class IntroLinkedList {
             head = newNode;
             return;
         }
-
+        
         newNode.next = head;
         head = newNode;
     }
@@ -30,7 +37,7 @@ public class IntroLinkedList {
             head = newNode;
             return;
         }
-
+        
         Node currNode = head;
         while(currNode.next != null){
             currNode = currNode.next;
@@ -59,7 +66,7 @@ public class IntroLinkedList {
         if(head == null){
             System.out.println("The list is empty.");
         }
-
+        size--;
         head = head.next;
     }
 
@@ -68,7 +75,7 @@ public class IntroLinkedList {
         if(head == null){
             System.out.println("The list is empty.");
         }
-
+        size--;
         if(head.next == null){
             head = null;
             return;
@@ -84,7 +91,9 @@ public class IntroLinkedList {
         secLast.next = null;
     }
 
-    
+    public int getSize(){
+        return size;
+    }
 
     public static void main(String args[]){
         IntroLinkedList list = new IntroLinkedList();
@@ -98,5 +107,8 @@ public class IntroLinkedList {
         list.printList();
         list.deleteLast();
         list.printList();
+        System.out.println(list.getSize());
+        list.addFirst("This");
+        System.out.println(list.getSize());
     }
 }
