@@ -34,7 +34,22 @@ public class IntroDoublyLinkedList {
         }
     }
 
+    public void print(){
+        Node temp = head;
+
+        while(temp != null){
+            System.out.print(temp.data + " <=> ");
+            temp = temp.next;
+        }
+        System.out.println("NULL\n");
+    }
+
     public static void main(String args[]){
         IntroDoublyLinkedList dll = new IntroDoublyLinkedList();   
+        dll.push_front(1);
+        dll.push_front(2);
+        dll.push_front(3);
+
+        dll.print();
     }
 }
