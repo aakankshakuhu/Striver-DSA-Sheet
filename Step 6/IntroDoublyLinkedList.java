@@ -34,6 +34,20 @@ public class IntroDoublyLinkedList {
         }
     }
 
+    public void push_back(int data){
+        Node newNode = new Node(data);
+
+        if(head == null){
+            tail = newNode;
+            head = tail; 
+        }
+        else{
+            newNode.prev = tail;
+            tail.next = newNode;
+            tail = newNode;
+        }
+    }
+
     public void print(){
         Node temp = head;
 
@@ -46,9 +60,15 @@ public class IntroDoublyLinkedList {
 
     public static void main(String args[]){
         IntroDoublyLinkedList dll = new IntroDoublyLinkedList();   
-        dll.push_front(1);
-        dll.push_front(2);
-        dll.push_front(3);
+        // dll.push_front(1);
+        // dll.push_front(2);
+        // dll.push_front(3);
+
+        dll.print();
+
+        dll.push_back(1);
+        dll.push_back(2);
+        dll.push_back(3);
 
         dll.print();
     }
