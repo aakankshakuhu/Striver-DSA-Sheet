@@ -20,6 +20,20 @@ public class IntroDoublyLinkedList {
         tail = null;
     }
 
+    public void push_front(int data) {
+        Node newNode = new Node(data);
+
+        if(head == null){
+            head = newNode;
+            tail = newNode;
+        }
+        else{
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+    }
+
     public static void main(String args[]){
         IntroDoublyLinkedList dll = new IntroDoublyLinkedList();   
     }
