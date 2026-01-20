@@ -58,6 +58,21 @@ public class IntroDoublyLinkedList {
         System.out.println("NULL\n");
     }
 
+    void pop_front() {
+        if (head == null){
+            System.out.println("DLL is empty.");
+            return;
+        }
+        Node temp = head;
+        head = head.next;
+
+        if(head != null){
+            head.prev = null;
+        }
+        temp.next = null;
+    }
+
+
     public static void main(String args[]){
         IntroDoublyLinkedList dll = new IntroDoublyLinkedList();   
         // dll.push_front(1);
@@ -70,6 +85,9 @@ public class IntroDoublyLinkedList {
         dll.push_back(2);
         dll.push_back(3);
 
+        dll.print();
+
+        dll.pop_front();
         dll.print();
     }
 }
