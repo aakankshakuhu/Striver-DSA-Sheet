@@ -72,6 +72,15 @@ public class IntroDoublyLinkedList {
         temp.next = null;
     }
 
+    void pop_back(){
+        Node temp = tail;
+        tail = tail.prev;
+
+        if(tail != null){
+            tail.next = null;
+        }
+        temp.prev = null;
+    }
 
     public static void main(String args[]){
         IntroDoublyLinkedList dll = new IntroDoublyLinkedList();   
@@ -88,6 +97,9 @@ public class IntroDoublyLinkedList {
         dll.print();
 
         dll.pop_front();
+        dll.print();
+
+        dll.pop_back();
         dll.print();
     }
 }
