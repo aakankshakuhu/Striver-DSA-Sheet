@@ -69,6 +69,22 @@ public class ReverseDoublyLinkedList {
         return head;
     }
 
+    public Node reverseDLLoptimal(){
+        Node curr = head;
+        Node last = null;
+
+        while(curr != null){
+            Node temp = curr.next;
+            curr.next = curr.prev;
+            curr.prev = temp;
+
+            last = curr;
+            curr = temp;
+        }
+        head = last;
+        return last;
+    }
+
     public static void main(String args[]){
         ReverseDoublyLinkedList dll = new ReverseDoublyLinkedList();   
         dll.push_front(1);
@@ -77,7 +93,7 @@ public class ReverseDoublyLinkedList {
 
         dll.print();
 
-        System.out.println(dll.reverseDLL());
+        dll.reverseDLLoptimal();
 
         dll.print();
     }
