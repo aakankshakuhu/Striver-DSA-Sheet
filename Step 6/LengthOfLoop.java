@@ -24,7 +24,17 @@ class Solution {
         return 0;
     }
 
+    public int countLoopLength(Node meetingPoint) {
+        Node temp = meetingPoint;
+        int length = 1;
 
+        // Move until we meet again
+        while (temp.next != meetingPoint) {
+            temp = temp.next;
+            length++;
+        }
+        return length;
+    }
 }
 
 public class LengthOfLoop {
